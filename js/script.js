@@ -31,15 +31,12 @@ createApp({
                 }
             ],
             activeIndex: 0,
-            isMouseOver: false
+            isMouseOver: false,
+            caruselInterval: null
         }
     },
     mounted() {
-        if (!(this.isMouseOver)) {
-            setInterval(() => {
-                this.nextSlide();
-            }, 3000);
-        }
+        this.slideInterval();
     },
     methods: {
         nextSlide() {
@@ -56,9 +53,19 @@ createApp({
         },
         focus() {
             this.isMouseOver = true
+            clearInterval(this.caruselInterval)
         },
         deFocus() {
-            this.isMouseOver = false
+            this.isMouseOver = false;
+            this.slideInterval();
+        },
+        slideInterval() {
+            this.caruselInterval = setInterval(() => {
+                if (!this.isMouseOver) {
+                    this.nextSlide();
+                }
+                console.log('eddaje');
+            }, 3000);
         }
     }
 }).mount('#app');
