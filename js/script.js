@@ -32,7 +32,8 @@ createApp({
             ],
             activeIndex: 0,
             isMouseOver: false,
-            caruselInterval: null
+            caruselInterval: null,
+            infoVisivility: false,
         }
     },
     mounted() {
@@ -68,6 +69,18 @@ createApp({
         },
         setIndex(newIndex) {
             this.activeIndex = newIndex
+        },
+        infoToggle() {
+            const infoTxt = document.getElementById('imageInfo')
+            if (infoTxt.classList.contains('d-none')) {
+                infoTxt.style.opacity = '1';
+                infoTxt.classList.remove('d-none');
+            } else {
+                infoTxt.style.opacity = '0';
+                setTimeout(() => {
+                    infoTxt.classList.add('d-none')
+                }, 950);
+            }
         }
     }
 }).mount('#app');

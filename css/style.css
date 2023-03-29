@@ -52,9 +52,27 @@ img.active{
     opacity: .7;
     transition: all 1s;
     cursor: pointer;
+    animation: fadein 2s;
 }
 #mainImgWrap button:hover {
     opacity: 1;
+}
+#mainImgWrap i{
+    width: 1rem;
+}
+#mainImgWrap p{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 2rem;
+    backdrop-filter: blur(20px);
+    color: white;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    text-shadow: 0px 0px 10px black;
+    animation: fadein 1s;
+    transition: all 1s;
 }
 /* thumbnails */
 .thumbnails{
@@ -78,7 +96,7 @@ img.active{
     opacity:0.5;
 }
 /* buttons */
-button{
+#thumbnails button{
     color: var(--pink);
     background-color: transparent;
     border: none;
@@ -88,13 +106,13 @@ button{
     font-size: 2.5rem;
     z-index: 3;
 }
-button.next{
+#thumbnails button.next{
     bottom: -15px;
 }
-button.prev{
+#thumbnails button.prev{
     top: -15px;
 }
-button i{
+ button i{
     text-shadow: 0.8px 2.7px 5.2px black;
 }
 
@@ -106,5 +124,4 @@ button i{
     100%{
         opacity: 1;
     }
-    
 }
