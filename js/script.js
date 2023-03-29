@@ -64,7 +64,6 @@ createApp({
                 if (!this.isMouseOver) {
                     this.nextSlide();
                 }
-                console.log('eddaje');
             }, 3000);
         }
     }
