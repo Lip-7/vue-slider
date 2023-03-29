@@ -65,6 +65,9 @@ createApp({
                     this.nextSlide();
                 }
             }, 3000);
+        },
+        setIndex(newIndex) {
+            this.activeIndex = newIndex
         }
     }
 }).mount('#app');

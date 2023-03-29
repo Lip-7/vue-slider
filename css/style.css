@@ -51,6 +51,7 @@ img.active{
     height: calc((100% / 5) - 10px);
     overflow: hidden;
     transition: all 1s;
+    cursor: pointer;
 }
 .single-img img{
     object-fit: cover;

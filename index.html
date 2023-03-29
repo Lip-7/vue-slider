@@ -25,7 +25,7 @@
                         </div>
                         <div id="thumbnails"
                             class="thumbnails h-100 d-flex flex-column justify-content-between align-items-center position-relative">
-                            <div :class="{'active': activeIndex == index}" v-for="(image, index) in images" :key="index" class="single-img rounded-4 w-100"><img class="w-100 h-100" :src="'./img/' + image.image" :alt="image.title"></div>
+                            <div @click="setIndex(index)" :class="{'active': activeIndex == index}" v-for="(image, index) in images" :key="index" class="single-img rounded-4 w-100"><img class="w-100 h-100" :src="'./img/' + image.image" :alt="image.title"></div>
                             <button @click="nextSlide" class="next"><i class="fa-solid fa-chevron-down"></i></button>
                             <button @click="prevSlide" class="prev"><i class="fa-solid fa-chevron-up"></i></button>
                         </div>
