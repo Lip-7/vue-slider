@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --pink:#D911B8;
+    --violet:#3711BF;
+    --light-color: #E8E3FF;
+    --dark-violet: #0D0B59;
+    --dark-color: #000626;
+}
+.wrapper{
+    background-image: url(../img/rm251-mind-01-a.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/* full slider */
+.full-slider-wrap{
+    height: calc(60% + 4px);
+    background-image: linear-gradient(135deg, #1C107230, #10082D70, #9D0E8A30);
+}
+.full-slider{
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+}
+/* main img */
+.main-img{
+    width: calc(75% - 10px);
+}
+.main-img img{
+    opacity: 1;
+    transition: all 1s;
+    animation: fadein 1s;
+}
+img.active{
+    display: inline-block;
+    transition: all 1s;
+}
+#mainImgWrap img:nth-child(3){
+    object-position: right;
+}
+#mainImgWrap img:nth-child(4){
+    object-position: right;
+}
+/* thumbnails */
+.thumbnails{
+    width: calc(25% - 10px);
+}
+.thumbnails .single-img{
+    height: calc((100% / 5) - 10px);
+    overflow: hidden;
+    transition: all 1s;
+}
+.single-img img{
+    object-fit: cover;
+    object-position: center;
+}
+.single-img.active{
+    border: 4px solid var(--pink);
+    opacity: 1;
+}
+.single-img{
+    opacity:0.5;
+}
+/* buttons */
+button{
+    color: var(--pink);
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    z-index: 3;
+}
+button.next{
+    bottom: -15px;
+}
+button.prev{
+    top: -15px;
+}
+button i{
+    text-shadow: 0.8px 2.7px 5.2px black;
+}
+
+/* animations */
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
