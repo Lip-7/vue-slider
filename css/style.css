@@ -43,6 +43,19 @@ img.active{
 #mainImgWrap img:nth-child(4){
     object-position: right;
 }
+#mainImgWrap button {
+    width: fit-content;
+    height: fit-content;
+    top: 7px;
+    right: 7px;
+    color: white;
+    opacity: .7;
+    transition: all 1s;
+    cursor: pointer;
+}
+#mainImgWrap button:hover {
+    opacity: 1;
+}
 /* thumbnails */
 .thumbnails{
     width: calc(25% - 10px);
